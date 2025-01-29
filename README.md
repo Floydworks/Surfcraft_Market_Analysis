@@ -9,7 +9,7 @@ https://api.census.gov/data/2023/acs/acs5/variables.html
 
 
 Part2: Map of existing retailers in select counties
-Focus on coastal counties with: 
+<br>Focus on coastal counties with: 
 relatively high income
 large populations
 swimmable beaches

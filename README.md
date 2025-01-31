@@ -2,7 +2,7 @@
 data files and code for coastal retailers and population metrics
 
 
-Part 1: Analysis of coastal US counties, population, and income
+## Part 1: Analysis of coastal US counties, population, and income
 <br>American Community Survey 5-year: ACS5
 <br>https://www.census.gov/data/developers/data-sets/acs-5year.html
 <br>https://api.census.gov/data/2023/acs/acs5/variables.html
@@ -12,7 +12,7 @@ Part 1: Analysis of coastal US counties, population, and income
 
 
 
-Part2: Map of existing retailers in select counties
+## Part2: Map of existing retailers in select counties
 <br>Focus on coastal counties with: 
 <br>relatively high income
 <br>large populations
@@ -22,7 +22,7 @@ Part2: Map of existing retailers in select counties
 <br> link to these text files
 <br> code for parsing the text and exporting to working directory
 
-# googlemaps module and Places API key
+### googlemaps module and Places API key
 <br> get major business addresses and location data, ex. "Target, *, FL"
 <br> get location data for businesses from google search results
 

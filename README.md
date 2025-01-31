@@ -22,7 +22,7 @@ Part2: Map of existing retailers in select counties
 <br> link to these text files
 <br> code for parsing the text and exporting to working directory
 
-<br>## googlemaps module and Places API key
+<br>#googlemaps module and Places API key
 <br> get major business addresses and location data, ex. "Target, *, FL"
 <br> get location data for businesses from google search results
 

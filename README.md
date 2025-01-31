@@ -27,5 +27,5 @@ data files and code for coastal retailers and population metrics
 <br> get location data for businesses from google search results
 
 
-
+<br>put all places together in one dataset with a field/property that labels the business type: large retailer, surf shop, gift shop, sporting good store, marine and fishing supply
 

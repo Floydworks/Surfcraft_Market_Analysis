@@ -30,7 +30,8 @@ data files and code for coastal retailers and population metrics
 <br>put all places together in one dataset with a field/property that labels the business type: large retailer, surf shop, gift shop, sporting good store, marine and fishing supply
 
 ## Steps
-<br> 1. census.gov data + mit cost of living for Florida coastal counties
+<br> 1. Collect and integrate population, income, and cost of living data
+<br> -census.gov data + mit cost of living for Florida coastal counties
 <br> -median income - cost of living = disposable income
 <br> -population density
 <br>

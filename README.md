@@ -29,3 +29,9 @@ data files and code for coastal retailers and population metrics
 
 <br>put all places together in one dataset with a field/property that labels the business type: large retailer, surf shop, gift shop, sporting good store, marine and fishing supply
 
+## Steps
+census.gov data + mit cost of living for Florida coastal counties
+<br> median income - cost of living = disposable income
+analyze market by county, select 4 counties in Florida and more along east coast
+buisiness names google search + placesAPI location data for buisinesses and large retailers![image](https://github.com/user-attachments/assets/32e8e8ab-3160-42d8-a87d-fc906591bcc5)
+

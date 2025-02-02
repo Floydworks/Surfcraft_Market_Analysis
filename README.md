@@ -30,15 +30,18 @@ data files and code for coastal retailers and population metrics
 <br>put all places together in one dataset with a field/property that labels the business type: large retailer, surf shop, gift shop, sporting good store, marine and fishing supply
 
 ## Steps
-1. census.gov data + mit cost of living for Florida coastal counties
+<br> 1. census.gov data + mit cost of living for Florida coastal counties
 <br> -median income - cost of living = disposable income
 <br> -population density
-<br> analyze market by county in Tableau
-<br> -select 4 counties in Florida and more along east coast
 <br>
-<br> buisiness names google search + placesAPI location data for buisinesses and large retailers
-<br> get data into proper JSON format
-<br> map buisinesses by category
+<br> 2. Determine which counties or areas are highly populated and with high disposable income
+<br> -analyze market by county along Florida coast in Tableau
+<br> -select 4 counties in Florida for business data collection
+<br>
+<br> 3.
+<br> -buisiness names google search + placesAPI location data for buisinesses and large retailers
+<br> -get data into proper JSON format
+<br> -map buisinesses by category: surf shops, gift shops, major retailer, sporting good supply
 <br>
 <br> 
 

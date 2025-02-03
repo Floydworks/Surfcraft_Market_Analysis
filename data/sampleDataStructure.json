@@ -1,0 +1,43 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": "4e1ac14a-3ed1-418b-a474-2e6befe72fd1",
+            "properties": {
+                "name": "Target",
+                "category": "big retail",
+                "address": "1234 Main St",
+                "city": "Stuart",
+                "state": "FL",
+                "zip": "21401"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.98076,
+                    38.855163
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "5bff044b-2dbc-4b38-90ca-ad620223143f",
+            "properties": {
+                "name": "Surf Shop",
+                "category": "small retail",
+                "address": "1234 Another St",
+                "city": "Stuart",
+                "state": "FL",
+                "zip": "21401"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.98075,
+                    38.855164
+                ]
+            }
+        }
+    ]
+}

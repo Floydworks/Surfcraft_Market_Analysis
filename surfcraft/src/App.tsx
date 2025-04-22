@@ -1,33 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useRef, useEffect, useState } from 'react'
+import mapboxgl from 'mapbox-gl'
+
+import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css'
 
+const INITIAL_CENTER = [
+  -74.0242,
+  40.6941
+]
+const INITIAL_ZOOM = 10.12
+
 function App() {
-  const [count, setCount] = useState(0)
+  const mapRef = useRef()
+  const mapContainerRef = useRef()
+
+  const [center, setCenter] = useState(INITIAL_CENTER)
+  const [zoom, setZoom] = useState(INITIAL_ZOOM)
+
+  useEffect(() => {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGV5YWthdGVoZXJlIiwiYSI6ImNtNmw1bnppeTA1aGMybXEza3psYzRpYngifQ.LOVRZJSPf8ZL62tgSEpqow'
+    mapRef.current = new mapboxgl.Map({
+      container: mapContainerRef.current,
+      center: center,
+      zoom: zoom
+    });
+
+    mapRef.current.on('move', () => {
+      // get the current center coordinates and zoom level from the map
+      const mapCenter = mapRef.current.getCenter()
+      const mapZoom = mapRef.current.getZoom()
+
+      // update state
+      setCenter([ mapCenter.lng, mapCenter.lat ])
+      setZoom(mapZoom)
+    })
+
+    return () => {
+      mapRef.current.remove()
+    }
+  }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="sidebar">
+        Longitude: {center[0].toFixed(4)} | Latitude: {center[1].toFixed(4)} | Zoom: {zoom.toFixed(2)}
       </div>
-      <h1>Vite + React + ME!</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div id='map-container' ref={mapContainerRef} />
     </>
   )
 }

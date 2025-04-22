@@ -1,6 +1,6 @@
 import ReactMapGL from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { mbToken, mbStyle } from './tokens';
+import { mbToken, mbStyle } from './constants/tokens';
 
 const Map = (props: any) => (
   <ReactMapGL
@@ -15,9 +15,7 @@ function SurfMap() {
       mapStyle={mbStyle}
       center={[0, 0]}
       zoom={1}
-      // other props
     >
-      {/* Map content here */}
     </Map>
   );
 }

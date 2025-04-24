@@ -1,11 +1,13 @@
 import ReactMapGL from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { mbToken, mbStyle } from './constants/tokens';
+
+const mbMapApiToken = import.meta.env.VITE_MB_MAP_API_TOKEN;
+const mbStyle = import.meta.env.VITE_MB_STYLE;
 
 const Map = (props: any) => (
   <ReactMapGL
     {...props}
-    mapboxApiAccessToken={mbToken}
+    mapboxApiAccessToken={mbMapApiToken}
   />
 );
 

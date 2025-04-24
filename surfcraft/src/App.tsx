@@ -1,9 +1,12 @@
 import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
-import { mbToken } from './constants/tokens';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './styles/App.css';
+import Tab from './components/Tab';
+
+
+const mbMapApiToken = import.meta.env.VITE_MB_MAP_API_TOKEN;
 
 const INITIAL_CENTER = [
   -74.0242,
@@ -19,12 +22,13 @@ function App() {
   const [zoom, setZoom] = useState(INITIAL_ZOOM)
 
   useEffect(() => {
-    mapboxgl.accessToken = mbToken
+    mapboxgl.accessToken = mbMapApiToken
     if (mapContainerRef.current) {
       mapRef.current = new mapboxgl.Map({
         container: mapContainerRef.current,
         center: center,
-        zoom: zoom
+        zoom: zoom,
+        // init: false, // uncomment to prevent map from loading during dev
       });
     }
     if (!mapRef.current) return
@@ -45,9 +49,7 @@ function App() {
 
   return (
     <>
-      <div className="sidebar">
-        Longitude: {center[0].toFixed(4)} | Latitude: {center[1].toFixed(4)} | Zoom: {zoom.toFixed(2)}
-      </div>
+    <Tab title='Surfcraft' />
       <div id='map-container' ref={mapContainerRef} />
     </>
   )

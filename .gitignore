@@ -5,7 +5,7 @@ __pycache__/
 
 .DS_Store
 .vite
-src/constants/tokens.tsx
+.env
 
 # C extensions
 *.so
@@ -175,7 +175,6 @@ cython_debug/
 .pypirc
 
 
-<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -200,6 +199,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-=======
-scripts/
->>>>>>> 2d8a367a2a00051e7d90194c828afd26e36b5b1e
